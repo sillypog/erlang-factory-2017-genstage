@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "data processing with genstage",
+    "packageVersion": "1.0.0",
+    "revealTheme": "sky",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "sillypog",
+    "githubRepository": "erlang-factory-2017-genstage"
+  }
+}
