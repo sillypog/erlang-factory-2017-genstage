@@ -1,1 +1,77 @@
-["index.md"]
+[
+    "real-time-data-pipelines-with-elixir-genstage.html",
+    "about-me.html",
+    "data-engineering-at-bleacher-report.html",
+    "old-architecture-intro.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/platform_architecture.jpg",
+            "data-background-size": "auto 100%"
+        }
+    },
+    "new-architecture-intro.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-no-errors.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-no-errors-no-redis.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-no-errors-no-redis-no-s3.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-linear.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    "about-genstage.html",
+    "lazy-concurrent-distributed.html",
+    "backpressure.html",
+    "backpressure-2.html",
+    "example-pipeline.html",
+    "increasing-capacity.html",
+    "vendor-architecture-intro.html",
+    "data-analysis-with-flow.html",
+    "mparticle-data-format.html",
+    "ruby-map-reduce.html",
+    "lazy-evaluation-with-streams.html",
+    "lazy-concurrent-distributed-2.html",
+    "concurrent-evaluation-with-flow.html",
+    "parallel-vs-sequential-performance.html",
+    "parallel-vs-sequential-output.html",
+    "partioning-with-flow.html",
+    "partition-vs-sequential-performance.html",
+    "know-your-data.html",
+    "grouping-keys-before-reduction.html",
+    "group-vs-sequential-performance.html",
+    "from-enumerables.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/flow-timings.svg",
+            "data-background-size": "auto 80%"
+        }
+    }
+]

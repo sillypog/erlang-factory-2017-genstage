@@ -1,0 +1,253 @@
+<h2>Processes and back&#8209;pressure</h2>
+
+<!-- img id="no-backpressure" src="resources/no-backpressure.svg" -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="600"
+   height="300"
+   viewBox="0 0 600.00001 300.00001"
+   id="no-backpressure"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="no-backpressure.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Tail"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Tail"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <g
+         id="g10816"
+         transform="scale(-1.2,-1.2)"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1">
+        <path
+           id="path10818"
+           d="M -3.8048674,-3.9585227 0.54352094,0"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path10820"
+           d="M -1.2866832,-3.9585227 3.0617053,0"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path10822"
+           d="M 1.3053582,-3.9585227 5.6537466,0"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path10824"
+           d="M -3.8048674,4.1775838 0.54352094,0.21974226"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path10826"
+           d="M -1.2866832,4.1775838 3.0617053,0.21974226"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+        <path
+           id="path10828"
+           d="M 1.3053582,4.1775838 5.6537466,0.21974226"
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:round;stroke-opacity:1"
+           inkscape:connector-curvature="0" />
+      </g>
+    </marker>
+    <marker
+       inkscape:stockid="Arrow2Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10801"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="436.97493"
+     inkscape:cy="204.2785"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1256"
+     inkscape:window-height="672"
+     inkscape:window-x="28"
+     inkscape:window-y="43"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-752.36216)">
+    <rect
+       style="fill:#add9e4;fill-opacity:1;fill-rule:evenodd;stroke:#74a7cb;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3336"
+       width="158.57143"
+       height="100"
+       x="68.85714"
+       y="845.505" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="91.508331"
+       y="881.2193"
+       id="text4138"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4140"
+         x="91.508331"
+         y="881.2193"
+         style="font-size:25px">Producer</tspan></text>
+    <rect
+       y="845.505"
+       x="368.85715"
+       height="100"
+       width="158.57143"
+       id="rect4169"
+       style="fill:#add9e4;fill-opacity:1;fill-rule:evenodd;stroke:#74a7cb;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4171"
+       y="881.2193"
+       x="383.70804"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:25px"
+         y="881.2193"
+         x="383.70804"
+         id="tspan4173"
+         sodipodi:role="line">Consumer</tspan></text>
+    <path
+       id="supplyArrow"
+       d="m 304.45798,865.42937 0,11.73707 -65.22214,0 0,36.67712 65.22214,0 0,11.73707 26.04637,-15.03809 26.04636,-15.03694 -26.04636,-15.03811 -26.04637,-15.03812 z"
+       style="fill:#de8787;fill-opacity:1;stroke:#b81729;stroke-width:1.8232336;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="383.63968"
+       y="925.38275"
+       id="text11161"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan11163"
+         x="383.63968"
+         y="925.38275">Mailbox</tspan></text>
+    <rect
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="mailbox1"
+       width="8.5714283"
+       height="25.714285"
+       x="450"
+       y="906.93359" />
+    <rect
+       y="906.93359"
+       x="462"
+       height="25.714285"
+       width="8.5714283"
+       id="mailbox2"
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="mailbox3"
+       width="8.5714283"
+       height="25.714285"
+       x="474"
+       y="906.93359" />
+    <rect
+       y="906.93359"
+       x="486"
+       height="25.714285"
+       width="8.5714283"
+       id="mailbox4"
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="mailbox5"
+       width="8.5714283"
+       height="25.714285"
+       x="498"
+       y="906.93359"
+       inkscape:label="#mailbox5" />
+    <rect
+       y="906.93359"
+       x="510"
+       height="25.714285"
+       width="8.5714283"
+       id="mailbox6"
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#mailbox6" />
+    <rect
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="mailbox7"
+       width="8.5714283"
+       height="25.714285"
+       x="522"
+       y="906.93359" />
+    <rect
+       y="906.93359"
+       x="534"
+       height="25.714285"
+       width="8.5714283"
+       id="mailbox8"
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="opacity:0.95;fill:#74a7cb;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="mailbox9"
+       width="8.5714283"
+       height="25.714285"
+       x="546"
+       y="906.93359" />
+  </g>
+</svg>
+
+<p>Without back&#8209;pressure</p>
+
+<!-- Notes
+Scenario: trying to decrypt millions of small files, one of which has the location of the hidden gold.
+Producer can quickly read these small files from a large hard disk.
+Consumer is the rate limiting step - decryption takes a long time to run for each file.
+
+Mailbox will continue to fill up.
+ - Prior to Erlang 19, this would use up all the memory on the node and crash the program.
+ - Now max_heap_size flag allows processes to be killed when they reach a certain size,
+   but you still lose the mailbox contents.
+
+Either way, you don't find the gold in time :(
+-->
+

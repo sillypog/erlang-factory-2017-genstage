@@ -1,0 +1,15 @@
+<div id="modes">
+  <div id="mode-synchronous" class="mode">Synchronous</div>
+  <div id="mode-asynchronous" class="mode fragment">Asynchronous</div>
+</div>
+<div id="modules">
+  <div class="flow flow-block module">Enum</div>
+  <div class="flow flow-arrow behaviour fragment">Lazy Evaluation</div>
+  <div class="flow flow-block module">Stream</div>
+  <div class="flow flow-arrow behaviour arrow fragment">Concurrent Evaluation</div>
+  <div class="flow flow-block module">GenStage</div>
+</div>
+
+<!-- Notes
+This is relevant because when everything is happening in one process, you don't need backpressure - that is applied by default because everything is synchronous.
+-->
