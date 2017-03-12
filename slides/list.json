@@ -1,6 +1,13 @@
 [
     "real-time-data-pipelines-with-elixir-genstage.html",
     "about-me.html",
+    "about-genstage.html",
+    "lazy-concurrent-distributed.html",
+    "backpressure.html",
+    "backpressure-2.html",
+    "example-pipeline.html",
+    "increasing-capacity.html",
+    "example-supervised-genstage-repo.html",
     "data-engineering-at-bleacher-report.html",
     "old-architecture-intro.html",
     {
@@ -46,17 +53,12 @@
             "data-background-size": "95% auto"
         }
     },
-    "about-genstage.html",
-    "lazy-concurrent-distributed.html",
-    "backpressure.html",
-    "backpressure-2.html",
-    "example-pipeline.html",
-    "increasing-capacity.html",
     "vendor-architecture-intro.html",
     "data-analysis-with-flow.html",
     "mparticle-data-format.html",
     "ruby-map-reduce.html",
     "lazy-evaluation-with-streams.html",
+    "basic-flow-diagram.html",
     "lazy-concurrent-distributed-2.html",
     "concurrent-evaluation-with-flow.html",
     "parallel-vs-sequential-performance.html",
@@ -73,5 +75,6 @@
             "data-background-image": "resources/flow-timings.svg",
             "data-background-size": "auto 80%"
         }
-    }
+    },
+    "example-flow-repo.html"
 ]
