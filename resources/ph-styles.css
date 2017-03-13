@@ -113,3 +113,7 @@ ul.bulletless {
 .figure .stage .stage-action {
   font-size: 0.5em;
 }
+
+#flow-flow-block.flow-block {
+  width: 161px;
+}
