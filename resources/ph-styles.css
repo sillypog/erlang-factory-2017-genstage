@@ -1,5 +1,11 @@
 .reveal sup { font-size: 0.6em; }
 
+.reveal section img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
 .bold {
   font-weight: bold;
   font-size: 1.25em;
@@ -116,4 +122,8 @@ ul.bulletless {
 
 #flow-flow-block.flow-block {
   width: 161px;
+}
+
+.red {
+  color: #ff0000;
 }

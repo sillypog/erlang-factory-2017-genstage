@@ -1,0 +1,14 @@
+<h2>S3 Events on SQS</h2>
+
+<ul>
+  <li>S3 can emit events on changes to bucket state</li>
+  <li>Restrict emission by activity, eg object creation</li>
+  <li>Restrict emission by object name prefix and suffix</li>
+  <li>Multiple delivery options
+    <ul>
+      <li>SQS - messages are queued until requested</li>
+      <li>SNS - messages are sent to all subscribers</li>
+      <li>Lambda - control delivery with function</li>
+    </ul>
+  </li>
+</ul>

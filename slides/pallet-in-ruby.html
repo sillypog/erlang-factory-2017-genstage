@@ -1,0 +1,12 @@
+<h2>Pallet</h2>
+
+<p>Transforms events for Redshift ingestion</p>
+
+<ul>
+  <li>Ruby application</li>
+  <li>Poll SQS for new file messages</li>
+  <li>Download the file and block SQS polling</li>
+  <li>Convert each json line to pipe separate table records</li>
+  <li>Upload converted records to processed folder</li>
+  <li>Continue polling SQS</li>
+</ul>

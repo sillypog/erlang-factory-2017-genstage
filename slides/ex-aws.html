@@ -1,0 +1,21 @@
+<h2>I <span class="red">&hearts;</span> ExAws</h2>
+
+<p>Interacting with the AWS API in Ruby</p>
+
+<pre>
+  <code data-trim data-noescape class="ruby">
+sqs = Aws::SQS::Client.new
+resp = sqs.receive_message({queue_url: "http://..."})
+  </code>
+</pre>
+
+<pre>
+  <code data-trim data-noescape class="ruby">
+poller = Aws::SQS::QueuePoller.new(ENV['SQS_ENDPOINT'])
+poller.poll do |msg|
+  consume(msg)
+end
+  </code>
+</pre>
+
+<p>AWS SDK includes high level abstractions</p>

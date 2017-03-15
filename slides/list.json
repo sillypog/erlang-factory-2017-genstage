@@ -17,7 +17,16 @@
             "data-background-size": "auto 100%"
         }
     },
+    "prism-our-first-warehouse.html",
+    "prism-our-first-warehouse-2.html",
     "new-architecture-intro.html",
+    {
+        "attr": {
+            "data-background-image": "resources/schema_design.svg",
+            "data-background-size": "auto 80%"
+        }
+    },
+    "this-requires-processing.html",
     {
         "attr": {
             "data-background-color": "#ffffff",
@@ -53,6 +62,30 @@
             "data-background-size": "95% auto"
         }
     },
+    "s3-events.html",
+    "sqs.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/sqs-message-lifecycle.png",
+            "data-background-size": "auto 80%"
+        }
+    },
+    "s3-sqs-cfn.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-linear-arrow.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    "pallet-in-ruby.html",
+    "pallet-scaling-strategy.html",
+    "amzn-price-2016.html",
+    "pallet-in-elixir.html",
+    "ex-aws.html",
+    "ex-aws-2.html",
+    "example-sqs-repo.html",
     "vendor-architecture-intro.html",
     "data-analysis-with-flow.html",
     "mparticle-data-format.html",
@@ -67,7 +100,6 @@
             "data-transition": "slide-in fade-out",
             "data-transition-speed": "fast"
         }
-
     },
     {
         "filename": "lazy-concurrent-distributed-3.html",
