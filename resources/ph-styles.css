@@ -127,3 +127,15 @@ ul.bulletless {
 .red {
   color: #ff0000;
 }
+
+.reveal dl {
+  list-style-type: disc;
+}
+
+.reveal dt {
+  font-weight: normal;
+}
+
+.reveal dd {
+  display: list-item;
+}
