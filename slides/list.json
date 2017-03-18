@@ -96,20 +96,7 @@
     "reducer-rb.html",
     "elixir-map-reduce.html",
     "lazy-evaluation-with-streams.html",
-    {
-        "filename": "lazy-concurrent-distributed-2.html",
-        "attr": {
-            "data-transition": "slide-in fade-out",
-            "data-transition-speed": "fast"
-        }
-    },
-    {
-        "filename": "lazy-concurrent-distributed-3.html",
-        "attr": {
-            "data-transition": "fade-in slide-out",
-            "data-transition-speed": "fast"
-        }
-    },
+    "lazy-concurrent-distributed-2.html",
     "basic-flow-diagram.html",
     "concurrent-evaluation-with-flow.html",
     "parallel-vs-sequential-performance.html",

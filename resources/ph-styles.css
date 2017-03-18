@@ -139,3 +139,7 @@ ul.bulletless {
 .reveal dd {
   display: list-item;
 }
+
+.hidden {
+  display: none !important;
+}

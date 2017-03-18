@@ -1,21 +1,40 @@
+Reveal.addEventListener('fragmentshown', function(event){
+  console.log("fragmentshown", event);
+  if (event.fragment.id === "animated-flow-text") {
+    console.log("showing flow text, hiding genstage text");
+    document.getElementById("animated-genstage-text").className = "hidden";
+    document.getElementById("animated-flow-text").className = "";
+  }
+});
+
+Reveal.addEventListener('fragmenthidden', function(event){
+  console.log("fragmenthidden", event);
+});
+
 Reveal.addEventListener('slidechanged', function(event){
   if (window.animationTimeouts){
-      for(var i = 0; i < window.animationTimeouts.length; i++){
-        tid = window.animationTimeouts.pop();
-        clearTimeout(tid);
-      }
-    } else {
-      window.animationTimeouts = [];
+    for(var i = 0; i < window.animationTimeouts.length; i++){
+      tid = window.animationTimeouts.pop();
+      clearTimeout(tid);
     }
+  } else {
+    window.animationTimeouts = [];
+  }
 
-  if (event.indexh == 4) {
-    animateNoBackpressure();
-  } else if (event.indexh == 5) {
-    animateBackpressure();
-  } else if (event.indexh == 28) {
-    animateFlow();
-  } else if (event.indexh == 34) {
-    animateFlowPartition();
+  // Get slide information to trigger animation
+  var slide = Reveal.getCurrentSlide();
+  var slidename = slide.dataset.html;
+
+  var animations = {
+    "slides/backpressure.html": animateNoBackpressure,
+    "slides/backpressure-2.html": animateBackpressure,
+    "slides/basic-flow-diagram.html": animateFlow,
+    "slides/know-your-data.html": animateFlowPartition
+  }
+
+  var animation = animations[slidename];
+  if (animation) {
+    animation();
   }
 });
 
