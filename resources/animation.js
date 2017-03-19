@@ -5,7 +5,65 @@ Reveal.addEventListener('fragmentshown', function(event){
     document.getElementById("animated-genstage-text").className = "hidden";
     document.getElementById("animated-flow-text").className = "";
   }
+
+  if (event.fragment.id === "basic-flow-1") {
+    console.log("showing fromEnumerable");
+    showSVGElements("#flow-diagram", ["#fileStreamArrow", "#fromEnumerable"])
+  }
+
+  if (event.fragment.id === "basic-flow-2") {
+    console.log("showing mapping");
+    showSVGElements("#flow-diagram", ["#mapArrow1", "#mapArrow2", "#mapArrow3", "#flatmap1", "#flatmap2", "#flatmap3"]);
+  }
+
+  if (event.fragment.id === "basic-flow-3") {
+    console.log("showing reducing");
+    showSVGElements("#flow-diagram", ["#reduceArrow", "#reduce1", "#reduce2", "#reduce3"]);
+  }
+
+  if (event.fragment.id === "basic-flow-4") {
+    console.log("showing labels");
+    showSVGElements("#flow-diagram", ["#producerLabel", "#producerConsumerLabel", "#consumerLabel"]);
+  }
+
+  if (event.fragment.id === "know-data-1") {
+    console.log("showing stream arrows");
+    showSVGElements("#know-your-data", ["#arrow1", "#arrow2", "#arrow3"]);
+  }
+
+  if (event.fragment.id === "know-data-2") {
+    console.log("showing map arrows");
+    showSVGElements("#know-your-data", ["#mapArrow"]);
+  }
+
+  if (event.fragment.id === "know-data-3") {
+    console.log("showing reduce arrow");
+    showSVGElements("#know-your-data", ["#reduceArrow", "#output"]);
+  }
+
+  if (event.fragment.id === "know-data-4") {
+    console.log("turning processes red");
+    reddenSVGElements("#know-your-data", ["#reduce1", "#reduce2"]);
+  }
 });
+
+function showSVGElements(svg, elements) {
+  var s = Snap(svg);
+
+  for (var i = 0; i < elements.length; i++) {
+    var element = s.select(elements[i]);
+    element.attr({opacity: 1});
+  }
+}
+
+function reddenSVGElements(svg, elements) {
+  var s = Snap(svg);
+
+  for (var i = 0; i < elements.length; i++) {
+    var element = s.select(elements[i]);
+    element.attr({fill: "#de8787", stroke: "#b81729"});
+  }
+}
 
 Reveal.addEventListener('fragmenthidden', function(event){
   console.log("fragmenthidden", event);
@@ -112,6 +170,7 @@ function animateFlow() {
   reduce3.attr({opacity: 0});
   consumerLabel.attr({opacity: 0});
 
+  /* // Animation is controlled through fragment events
   showAfter(fileStreamArrow, 2000);
   showAfter(fromEnumerable, 2000);
   showAfter(mapArrow1, 5000);
@@ -126,7 +185,7 @@ function animateFlow() {
   showAfter(reduce3, 10000);
   showAfter(producerLabel, 15000);
   showAfter(producerConsumerLabel, 17000);
-  showAfter(consumerLabel, 19000);
+  showAfter(consumerLabel, 19000); //*/
 }
 
 function animateFlowPartition() {
@@ -153,6 +212,7 @@ function animateFlowPartition() {
   reduce1.attr({fill: "#add9e4", stroke: "#74a7cb"});
   reduce2.attr({fill: "#add9e4", stroke: "#74a7cb"})
 
+  /*
   showAfter(arrow1, 10000);
   showAfter(arrow2, 10000);
   showAfter(arrow3, 10000);
@@ -168,7 +228,7 @@ function animateFlowPartition() {
   var redTimeout2 = setTimeout(function() {
     reduce2.attr({fill: "#de8787", stroke: "#b81729"});
   }, 25000);
-  window.animationTimeouts.push(redTimeout2);
+  window.animationTimeouts.push(redTimeout2); //*/
 
 }
 
