@@ -92,7 +92,7 @@ Reveal.addEventListener('slidechanged', function(event){
 
   var animation = animations[slidename];
   if (animation) {
-    animation();
+    animation(event);
   }
 });
 
@@ -134,8 +134,24 @@ function animateBackpressure() {
   }
 }
 
-function animateFlow() {
-  console.log("animateFlow");
+function animateFlow(event) {
+  console.log("animateFlow", event.previousSlide ? event.previousSlide.className : "");
+
+  // Don't need to build if going backwards
+  if (event.previousSlide && event.previousSlide.className == "future") {
+    // Also remove the "fragment" class from the fragments
+    document.getElementById("basic-flow-1").className = "hidden";
+    document.getElementById("basic-flow-2").className = "hidden";
+    document.getElementById("basic-flow-3").className = "hidden";
+    document.getElementById("basic-flow-4").className = "hidden";
+    return;
+  } else {
+    document.getElementById("basic-flow-1").className = "fragment hidden";
+    document.getElementById("basic-flow-2").className = "fragment hidden";
+    document.getElementById("basic-flow-3").className = "fragment hidden";
+    document.getElementById("basic-flow-4").className = "fragment hidden";
+  }
+
   var s = Snap("#flow-diagram");
 
   var fileStreamArrow = s.select("#fileStreamArrow");
@@ -188,8 +204,24 @@ function animateFlow() {
   showAfter(consumerLabel, 19000); //*/
 }
 
-function animateFlowPartition() {
-  console.log("animateFlowPartition");
+function animateFlowPartition(event) {
+  console.log("animateFlowPartition", event.previousSlide ? event.previousSlide.className : "");
+
+  // Don't need to build if going backwards
+  if (event.previousSlide && event.previousSlide.className == "future") {
+    // Also remove the "fragment" class from the fragments
+    document.getElementById("know-data-1").className = "hidden";
+    document.getElementById("know-data-2").className = "hidden";
+    document.getElementById("know-data-3").className = "hidden";
+    document.getElementById("know-data-4").className = "hidden";
+    return;
+  } else {
+    document.getElementById("know-data-1").className = "fragment hidden";
+    document.getElementById("know-data-2").className = "fragment hidden";
+    document.getElementById("know-data-3").className = "fragment hidden";
+    document.getElementById("know-data-4").className = "fragment hidden";
+  }
+
   var s = Snap("#know-your-data");
 
   var arrow1 = s.select("#arrow1");
