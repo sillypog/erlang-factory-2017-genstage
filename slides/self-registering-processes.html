@@ -1,0 +1,20 @@
+<h2>Self-registering Processes</h2>
+
+<pre>
+  <code data-trim data-noescape class="elixir">
+defmodule Example.B do
+  use GenStage
+
+  def start_link(pipeline_name) do
+    # Start with a unique but discoverable process name
+    process_name = Enum.join([pipeline_name, "B"], "")
+    GenStage.start_link(__MODULE__, :ok, name: String.to_atom(process_name))
+  end
+
+  def init(:ok) do
+    # Subscribe to the producer with the max_demand set for this pipeline
+    {:producer_consumer, :ok, subscribe_to: [{Example.A, min_demand: 0, max_demand: 1}]}
+  end
+  ...
+  </code>
+</pre>

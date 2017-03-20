@@ -3,11 +3,21 @@
     "about-me.html",
     "about-genstage.html",
     "lazy-concurrent-distributed.html",
+    "gold-decryption.html",
     "backpressure.html",
     "backpressure-2.html",
     "example-pipeline.html",
     "increasing-capacity.html",
     "example-supervised-genstage-repo.html",
+    "self-registering-processes.html",
+    "consumer-supervisor.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/supervision-tree.png",
+            "data-background-size": "90% auto"
+        }
+    },
     "data-engineering-at-bleacher-report.html",
     "old-architecture-intro.html",
     {

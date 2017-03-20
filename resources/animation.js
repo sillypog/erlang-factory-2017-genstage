@@ -84,6 +84,7 @@ Reveal.addEventListener('slidechanged', function(event){
   var slidename = slide.dataset.html;
 
   var animations = {
+    "slides/gold-decryption.html": animateGoldDecryption,
     "slides/backpressure.html": animateNoBackpressure,
     "slides/backpressure-2.html": animateBackpressure,
     "slides/basic-flow-diagram.html": animateFlow,
@@ -95,6 +96,28 @@ Reveal.addEventListener('slidechanged', function(event){
     animation(event);
   }
 });
+
+function animateGoldDecryption(){
+  var s = Snap("#gold-decryption");
+
+  var goldMarker = s.select("#goldMarker");
+
+  goldMarker.attr({opacity: 0});
+
+  for (var i = 1; i < 8; i++) {
+    var color = i == 7 ? "#d4aa00" : "#b81729"
+    changeColorAfter(s.select("#encryptedFile"+i), color, 2000 * i);
+  }
+
+  showAfter(goldMarker, 14000);
+}
+
+function changeColorAfter(element, color, delay) {
+  var closure = function(){
+    element.attr({fill: color});
+  }
+  window.animationTimeouts.push(setTimeout(closure, delay));
+}
 
 function animateNoBackpressure(){
   var s = Snap("#no-backpressure");
