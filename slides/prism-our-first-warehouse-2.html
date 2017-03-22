@@ -1,8 +1,14 @@
-<h2>Prism Issues</h2>
+<h2>Prism: Lessons learned</h2>
 
 <ul>
   <li>Problems at storage layer can affect data capture</li>
-  <li>Node.js application has many responsibilities</li>
-  <li>Data has to be extracted from Redshift to S3 for batch processing</li>
+  <li>Node.js application has many responsibilities
+    <ul>
+      <li>Capture</li>
+      <li>Batch processing</li>
+      <li>Querying</li>
+    </ul>
+  </li>
+  <li>Extract data from Redshift to S3 for batch processing</li>
   <li>Poor internal adoption rate</li>
 </ul>

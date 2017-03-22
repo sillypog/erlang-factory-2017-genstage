@@ -3,23 +3,28 @@
     "about-me.html",
     "about-genstage.html",
     "lazy-concurrent-distributed.html",
-    "gold-decryption.html",
     "backpressure.html",
     "backpressure-2.html",
     "example-pipeline.html",
     "increasing-capacity.html",
-    "example-supervised-genstage-repo.html",
-    "self-registering-processes.html",
-    "consumer-supervisor.html",
+    [
+        "example-supervised-genstage-repo.html",
+        "self-registering-processes.html",
+        "consumer-supervisor.html",
+        {
+            "attr": {
+                "data-background-color": "#ffffff",
+                "data-background-image": "resources/supervision-tree.png",
+                "data-background-size": "90% auto"
+            }
+        }
+    ],
     {
+        "filename": "data-engineering-at-bleacher-report.html",
         "attr": {
-            "data-background-color": "#ffffff",
-            "data-background-image": "resources/supervision-tree.png",
-            "data-background-size": "90% auto"
+            "data-background-color": "#ef3f23"
         }
     },
-    "data-engineering-at-bleacher-report.html",
-    "old-architecture-intro.html",
     {
         "attr": {
             "data-background-color": "#ffffff",
@@ -27,44 +32,7 @@
             "data-background-size": "auto 100%"
         }
     },
-    "prism-our-first-warehouse.html",
-    "prism-our-first-warehouse-2.html",
     "new-architecture-intro.html",
-    {
-        "attr": {
-            "data-background-image": "resources/schema_design.svg",
-            "data-background-size": "auto 80%"
-        }
-    },
-    "this-requires-processing.html",
-    {
-        "attr": {
-            "data-background-color": "#ffffff",
-            "data-background-image": "resources/warehouse-data-pipeline.svg",
-            "data-background-size": "95% auto"
-        }
-    },
-    {
-        "attr": {
-            "data-background-color": "#ffffff",
-            "data-background-image": "resources/warehouse-data-pipeline-no-errors.svg",
-            "data-background-size": "95% auto"
-        }
-    },
-    {
-        "attr": {
-            "data-background-color": "#ffffff",
-            "data-background-image": "resources/warehouse-data-pipeline-no-errors-no-redis.svg",
-            "data-background-size": "95% auto"
-        }
-    },
-    {
-        "attr": {
-            "data-background-color": "#ffffff",
-            "data-background-image": "resources/warehouse-data-pipeline-no-errors-no-redis-no-s3.svg",
-            "data-background-size": "95% auto"
-        }
-    },
     {
         "attr": {
             "data-background-color": "#ffffff",
@@ -81,7 +49,6 @@
             "data-background-size": "auto 80%"
         }
     },
-    "s3-sqs-cfn.html",
     {
         "attr": {
             "data-background-color": "#ffffff",
@@ -93,13 +60,12 @@
     "pallet-scaling-strategy.html",
     "amzn-price-2016.html",
     "pallet-in-elixir.html",
-    "sqs-s3-genstage-design.html",
     "example-sqs-repo.html",
+    "sqs-s3-genstage-design.html",
     "simply-complete-your-pipeline.html",
     "ex-aws.html",
     "ex-aws-2.html",
     "vendor-architecture-intro.html",
-    "data-analysis-with-flow.html",
     "mparticle-data-format.html",
     "ruby-map-reduce.html",
     "mapper-rb.html",
@@ -114,13 +80,14 @@
     "partioning-with-flow.html",
     "partition-vs-sequential-performance.html",
     "know-your-data.html",
+    "flow-stages-1.html",
     "grouping-keys-before-reduction.html",
     "group-vs-sequential-performance.html",
     "from-enumerables.html",
     {
         "attr": {
             "data-background-color": "#ffffff",
-            "data-background-image": "resources/flow-timings.svg",
+            "data-background-image": "resources/flow-timings-color.svg",
             "data-background-size": "auto 80%"
         }
     },

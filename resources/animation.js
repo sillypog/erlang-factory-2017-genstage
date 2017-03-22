@@ -33,15 +33,10 @@ Reveal.addEventListener('fragmentshown', function(event){
 
   if (event.fragment.id === "know-data-2") {
     console.log("showing map arrows");
-    showSVGElements("#know-your-data", ["#mapArrow"]);
+    showSVGElements("#know-your-data", ["#mapArrow", "#reduceArrow", "#output"]);
   }
 
   if (event.fragment.id === "know-data-3") {
-    console.log("showing reduce arrow");
-    showSVGElements("#know-your-data", ["#reduceArrow", "#output"]);
-  }
-
-  if (event.fragment.id === "know-data-4") {
     console.log("turning processes red");
     reddenSVGElements("#know-your-data", ["#reduce1", "#reduce2"]);
   }
@@ -105,8 +100,10 @@ function animateGoldDecryption(){
   goldMarker.attr({opacity: 0});
 
   for (var i = 1; i < 8; i++) {
-    var color = i == 7 ? "#d4aa00" : "#b81729"
-    changeColorAfter(s.select("#encryptedFile"+i), color, 2000 * i);
+    var file = s.select("#encryptedFile"+i);
+    file.attr({fill: "#74a7cb"}); // reset to blue
+    var color = i == 7 ? "#d4aa00" : "#b81729";
+    changeColorAfter(file, color, 2000 * i);
   }
 
   showAfter(goldMarker, 14000);
@@ -236,13 +233,11 @@ function animateFlowPartition(event) {
     document.getElementById("know-data-1").className = "hidden";
     document.getElementById("know-data-2").className = "hidden";
     document.getElementById("know-data-3").className = "hidden";
-    document.getElementById("know-data-4").className = "hidden";
     return;
   } else {
     document.getElementById("know-data-1").className = "fragment hidden";
     document.getElementById("know-data-2").className = "fragment hidden";
     document.getElementById("know-data-3").className = "fragment hidden";
-    document.getElementById("know-data-4").className = "fragment hidden";
   }
 
   var s = Snap("#know-your-data");
