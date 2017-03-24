@@ -36,7 +36,7 @@
     {
         "attr": {
             "data-background-color": "#ffffff",
-            "data-background-image": "resources/warehouse-data-pipeline-linear.svg",
+            "data-background-image": "resources/warehouse-data-pipeline-linear-annotated.svg",
             "data-background-size": "95% auto"
         }
     },
