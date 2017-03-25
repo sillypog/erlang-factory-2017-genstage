@@ -1,0 +1,49 @@
+<h2>mParticle data format</h2>
+
+<pre>
+  <code data-trim data-noescape>
+{
+  "events": [
+    {
+      "data": {
+        "timestamp_unixtime_ms": 1475280881290,
+        "custom_attributes": {},
+        "device_current_state": {...}
+      },
+      "event_type": "session_start"
+    },
+    {
+      "data": {
+        "custom_event_type": "other",
+        "event_name": "Stream Selected",
+        "timestamp_unixtime_ms": 1475280881290,
+        "custom_attributes": {...},
+        "device_current_state": {...}
+      },
+      "event_type": "custom_event"
+    },
+    {
+      "data": {
+        "timestamp_unixtime_ms": 1475280881929,
+        "custom_attributes": {},
+        "device_current_state": {...}
+      },
+      "event_type": "application_state_transition"
+    },
+    {
+      "data": {
+        "timestamp_unixtime_ms": 1475280882377,
+        "custom_attributes": {...},
+        "device_current_state": {...}
+      },
+      "event_type": "screen_view"
+    }
+  ],
+  "timestamp_unixtime_ms": 1475280893974,
+  "message_type": "events",
+  "device_info": {...},
+  "application_info": {...},
+  "user_identities": [...]
+}
+  </code>
+</pre>

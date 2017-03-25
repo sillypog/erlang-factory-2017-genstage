@@ -1,0 +1,99 @@
+[
+    "real-time-data-pipelines-with-elixir-genstage.html",
+    "about-me.html",
+    "about-genstage.html",
+    "lazy-concurrent-distributed.html",
+    "backpressure.html",
+    "backpressure-2.html",
+    "example-pipeline.html",
+    "increasing-capacity.html",
+    [
+        "example-supervised-genstage-repo.html",
+        "self-registering-processes.html",
+        "consumer-supervisor.html",
+        {
+            "attr": {
+                "data-background-color": "#ffffff",
+                "data-background-image": "resources/supervision-tree.png",
+                "data-background-size": "90% auto"
+            }
+        }
+    ],
+    {
+        "filename": "data-engineering-at-bleacher-report.html",
+        "attr": {
+            "data-background-color": "#ef3f23"
+        }
+    },
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/platform_architecture.jpg",
+            "data-background-size": "auto 100%"
+        }
+    },
+    "new-architecture-intro.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-linear-annotated.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    "s3-events.html",
+    "sqs.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/sqs-message-lifecycle.png",
+            "data-background-size": "auto 80%"
+        }
+    },
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/warehouse-data-pipeline-linear-arrow.svg",
+            "data-background-size": "95% auto"
+        }
+    },
+    "pallet-in-ruby.html",
+    "pallet-scaling-strategy.html",
+    "amzn-price-2016.html",
+    "pallet-in-elixir.html",
+    "example-sqs-repo.html",
+    "sqs-s3-genstage-design.html",
+    "simply-complete-your-pipeline.html",
+    "ex-aws.html",
+    "ex-aws-2.html",
+    "vendor-architecture-intro.html",
+    "mparticle-data-format.html",
+    "ruby-map-reduce.html",
+    "mapper-rb.html",
+    "reducer-rb.html",
+    "elixir-map-reduce.html",
+    "lazy-evaluation-with-streams.html",
+    "lazy-concurrent-distributed-2.html",
+    "basic-flow-diagram.html",
+    "concurrent-evaluation-with-flow.html",
+    "parallel-vs-sequential-performance.html",
+    "parallel-vs-sequential-output.html",
+    "partioning-with-flow.html",
+    "partition-vs-sequential-performance.html",
+    "know-your-data.html",
+    "flow-stages-1.html",
+    "grouping-keys-before-reduction.html",
+    "group-vs-sequential-performance.html",
+    "from-enumerables.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/flow-timings-color.svg",
+            "data-background-size": "auto 80%"
+        }
+    },
+    "example-flow-repo.html",
+    "exaws-flow.html",
+    "exaws-task-async.html",
+    "conclusion.html",
+    "thankyou.html"
+]

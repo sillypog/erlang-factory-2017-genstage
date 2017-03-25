@@ -1,0 +1,42 @@
+<h2>GenStage Data Pipeline</h2>
+
+<div class="figure">
+  <div class="stage">
+    <div class="stage-process stage-bottleneck">
+      <div class="stage-type">Server Task</div>
+      <div class="stage-action">Polls SQS</div>
+    </div>
+    <div class="stage-process">
+      <div class="stage-type">Producer</div>
+      <div class="stage-action">Requests Messages</div>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="stage-process fragment" data-fragment-index="1">
+      <div class="stage-type">Producer Consumer</div>
+      <div class="stage-action">Downloads File</div>
+    </div>
+    <div class="stage-process">
+      <div class="stage-type">Producer Consumer</div>
+      <div class="stage-action">Downloads File</div>
+    </div>
+    <div class="stage-process fragment" data-fragment-index="2">
+      <div class="stage-type">Producer Consumer</div>
+      <div class="stage-action">Downloads File</div>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="stage-process fragment" data-fragment-index="1">
+      <div class="stage-type">Consumer</div>
+      <div class="stage-action">Outputs Analysis</div>
+    </div>
+    <div class="stage-process">
+      <div class="stage-type">Consumer</div>
+      <div class="stage-action">Outputs Analysis</div>
+    </div>
+    <div class="stage-process fragment" data-fragment-index="2">
+      <div class="stage-type">Consumer</div>
+      <div class="stage-action">Outputs Analysis</div>
+    </div>
+  </div>
+</div>

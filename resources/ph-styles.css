@@ -1,0 +1,153 @@
+.reveal sup { font-size: 0.6em; }
+
+.reveal section img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.ph-icon {
+  display: inline-block;
+  width:50px;
+  height: 50px;
+  /*background-image: url(/resources/link-icons.svg);*/
+  /*background-size: 500% 100%;*/
+
+
+  -webkit-mask: url(/resources/link-icons.svg);
+  -webkit-mask-size: 500% 100%;
+}
+
+.ph-icon-twitter {
+  /*background-position: 0 0;*/
+  -webkit-mask-position: 0 0;
+  background-color: #4099ff;
+}
+
+.ph-icon-github {
+  /*background-position: -200% 0;*/
+  -webkit-mask-position: -200% 0;
+  background-color: #333333;
+}
+
+ul.bulletless {
+  list-style-type: none;
+}
+
+#modules {
+  width: 100%;
+}
+
+#modules .flow{
+  display: inline-block;
+  height: 100px;
+  background-color: #00CC99;
+  padding: 10px;
+  max-width: 200px;
+  vertical-align: top;
+}
+
+/*#modules .flow-arrow::after {
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid green;
+  content: "";
+  width: 0;
+  height: 0;
+}*/
+
+#modules .flow-arrow {
+  background-color: #add9e4;
+}
+
+#modules .flow-block {
+  line-height: 2.5em;
+  background-color: #74a7cb;
+}
+
+#modes {
+  margin: 10px 0;
+  width: 100%;
+  line-height: 2em;
+}
+
+#modes .mode {
+  display: inline-block;
+  background-color: #add9e4;
+  color: #666666;
+}
+
+#mode-synchronous {
+  width: 50%;
+}
+
+#mode-asynchronous {
+  width: 45%;
+}
+
+.erlang-factory {
+  color: #b81729;
+}
+
+.figure .stage {
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+.figure .stage-process {
+  background-color: #74a7cb;
+  height: 130px;
+  padding-top: 20px;
+  margin-bottom: 10px ;
+}
+
+.figure .stage .stage-bottleneck{
+  background-color: #add9e4;
+}
+
+.figure .stage .stage-type {
+  font-size: 0.75em;
+  height: 80px;
+}
+
+.figure .stage .stage-action {
+  font-size: 0.5em;
+}
+
+#flow-flow-block.flow-block {
+  width: 161px;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.gold {
+  color: #d4aa00;
+}
+
+.reveal dl {
+  list-style-type: disc;
+}
+
+.reveal dt {
+  font-weight: normal;
+}
+
+.reveal dd {
+  display: list-item;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden;
+}

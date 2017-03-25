@@ -1,0 +1,17 @@
+<h2><span class="gold">Ex</span>Aws Abstractions</h2>
+
+<p><a href="https://github.com/CargoSense/ex_aws">https://github.com/CargoSense/ex_aws</a></p>
+
+<pre>
+  <code data-trim data-noescape class="ruby">
+# Set wait_time_seconds > 0 to query all servers and make fewer calls
+{status, response} = ExAws.SQS.receive_message("warehouse_raw_events", [
+  wait_time_seconds: 2,
+  max_number_of_messages: count
+])
+|> ExAws.request
+  </code>
+</pre>
+
+<p>SQS module: functions match the AWS API</p>
+<p>S3 module: contains abstractions - once based on GenStage</p>

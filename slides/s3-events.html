@@ -1,0 +1,14 @@
+<h2>S3 Events on SQS</h2>
+
+<ul>
+  <li>S3 can emit events on changes to bucket state</li>
+  <li>Restrict by activity, <code>s3:ObjectCreated:*</code></li>
+  <li>Restrict by pattern: <code>packrat/data/*.gz</code></li>
+  <li>Multiple delivery options
+    <ul>
+      <li class="gold">SQS</li>
+      <li>SNS</li>
+      <li>Lambda</li>
+    </ul>
+  </li>
+</ul>

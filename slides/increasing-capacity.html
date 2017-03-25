@@ -1,0 +1,29 @@
+<h2>Increasing Capacity</h2>
+
+<pre>
+  <code data-trim data-noescape>
+{:ok, a} = GenStage.start_link(A, 0)     # starting from zero
+{:ok, b} = GenStage.start_link(B, 2)     # multiply by 2
+
+{:ok, c1} = GenStage.start_link(C, 1000) # sleep for a second
+{:ok, c2} = GenStage.start_link(C, 1000) # sleep for a second
+{:ok, c3} = GenStage.start_link(C, 1000) # sleep for a second
+{:ok, c4} = GenStage.start_link(C, 1000) # sleep for a second
+
+GenStage.sync_subscribe(c1, to: b)
+GenStage.sync_subscribe(c2, to: b)
+GenStage.sync_subscribe(c3, to: b)
+GenStage.sync_subscribe(c4, to: b)
+GenStage.sync_subscribe(b, to: a)
+
+# Sleep so we see events printed.
+Process.sleep(:infinity)
+  </code>
+</pre>
+
+<p>...without increasing code</p>
+
+<!-- Notes
+There is a behavior called ConsumerSupervisor, which starts new consumers as demand comes in.
+I didn't know about this when making the example. Don't know if it would be helpful in scaling the producer/consumer and consumer as a unit though. It starts a new child process per event as they come in; can definitely see how this might not always be the way to go.
+-->

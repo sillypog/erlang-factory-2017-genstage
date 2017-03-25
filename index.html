@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Data Processing with GenStage</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/sky.css" id="theme">
+
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
+
+        <link rel="stylesheet" href="resources/ph-styles.css">
+
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                    
+                        
+    <section data-html="slides/real-time-data-pipelines-with-elixir-genstage.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/about-me.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/about-genstage.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/lazy-concurrent-distributed.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/backpressure.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/backpressure-2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/example-pipeline.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/increasing-capacity.html"></section>
+
+
+                    
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-html="slides/example-supervised-genstage-repo.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/self-registering-processes.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/consumer-supervisor.html"></section>
+
+
+                            
+                                
+    <section data-background-color="#ffffff" data-background-image="resources/supervision-tree.png" data-background-size="90% auto" ></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                        
+    <section data-background-color="#ef3f23" data-html="slides/data-engineering-at-bleacher-report.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background-color="#ffffff" data-background-image="resources/platform_architecture.jpg" data-background-size="auto 100%" ></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/new-architecture-intro.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background-color="#ffffff" data-background-image="resources/warehouse-data-pipeline-linear-annotated.svg" data-background-size="95% auto" ></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/s3-events.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/sqs.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background-color="#ffffff" data-background-image="resources/sqs-message-lifecycle.png" data-background-size="auto 80%" ></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background-color="#ffffff" data-background-image="resources/warehouse-data-pipeline-linear-arrow.svg" data-background-size="95% auto" ></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/pallet-in-ruby.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/pallet-scaling-strategy.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/amzn-price-2016.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/pallet-in-elixir.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/example-sqs-repo.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/sqs-s3-genstage-design.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/simply-complete-your-pipeline.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/ex-aws.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/ex-aws-2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/vendor-architecture-intro.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/mparticle-data-format.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/ruby-map-reduce.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/mapper-rb.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/reducer-rb.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/elixir-map-reduce.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/lazy-evaluation-with-streams.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/lazy-concurrent-distributed-2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/basic-flow-diagram.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/concurrent-evaluation-with-flow.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/parallel-vs-sequential-performance.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/parallel-vs-sequential-output.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/partioning-with-flow.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/partition-vs-sequential-performance.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/know-your-data.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/flow-stages-1.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/grouping-keys-before-reduction.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/group-vs-sequential-performance.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/from-enumerables.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background-color="#ffffff" data-background-image="resources/flow-timings-color.svg" data-background-size="auto 80%" ></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/example-flow-repo.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/exaws-flow.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/exaws-task-async.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/conclusion.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/thankyou.html"></section>
+
+
+                    
+                    
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+            ]
+          });
+
+        </script>
+        <script src="resources/animation.js"></script>
+    </body>
+
+</html>

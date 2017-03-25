@@ -1,0 +1,21 @@
+<h2>ExAws: Task.async</h2>
+
+<pre>
+  <code data-trim data-noescape class="elixir">
+defimpl ExAws.Operation, for: ExAws.S3.Download do
+  def perform(op, config) do
+    op
+    |> Download.build_chunk_stream(config)
+    |> Task.async_stream(fn boundaries ->
+      chunk = Download.get_chunk(op, boundaries, config)
+      write_chunk(file, chunk)
+    end,
+      max_concurrency: Keyword.get(op.opts, :max_concurrency, 8),
+      timeout: Keyword.get(op.opts, :timeout, 30_000)
+    )
+    |> Stream.run
+    {:ok, done}
+  end
+end
+  </code>
+</pre>

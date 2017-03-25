@@ -1,0 +1,23 @@
+<h2>Parallel map-reduce with Flow</h2>
+
+<pre>
+  <code data-trim data-noescape class="elixir">
+["events/1.txt", "events/2.txt"]
+|> Enum.reduce(%{}, &count_days_in_file/2)
+
+def count_days_in_file(filename, global_acc) do
+  filename
+  |> File.stream!
+  |> Flow.from_enumerable
+  |> Flow.flat_map(fn(line) ->
+    line
+    |> Poison.Parser.parse!
+    |> Exmr.Timestamp.get_timestamps_from_json
+  end)
+  |> Flow.reduce(fn -> final_acc end, fn(day, acc) ->
+    Map.update(acc, day, 1, &(&1 + 1))
+  end)
+  |> Enum.into(%{})
+end
+  </code>
+</pre>
