@@ -7,18 +7,17 @@
     "backpressure-2.html",
     "example-pipeline.html",
     "increasing-capacity.html",
-    [
-        "example-supervised-genstage-repo.html",
-        "self-registering-processes.html",
-        "consumer-supervisor.html",
-        {
-            "attr": {
-                "data-background-color": "#ffffff",
-                "data-background-image": "resources/supervision-tree.png",
-                "data-background-size": "90% auto"
-            }
+    "example-supervised-genstage-repo.html",
+    "self-registering-processes.html",
+    "consumer-supervisor.html",
+    {
+        "attr": {
+            "data-background-color": "#ffffff",
+            "data-background-image": "resources/supervision-tree.png",
+            "data-background-size": "90% auto"
         }
-    ],
+    },
+    "spacer-1.html",
     {
         "filename": "data-engineering-at-bleacher-report.html",
         "attr": {
@@ -32,6 +31,7 @@
             "data-background-size": "auto 100%"
         }
     },
+    "spacer-2.html",
     "new-architecture-intro.html",
     {
         "attr": {
@@ -40,6 +40,7 @@
             "data-background-size": "95% auto"
         }
     },
+    "spacer-3.html",
     "s3-events.html",
     "sqs.html",
     {
@@ -49,6 +50,7 @@
             "data-background-size": "auto 80%"
         }
     },
+    "spacer-4.html",
     {
         "attr": {
             "data-background-color": "#ffffff",
@@ -56,6 +58,7 @@
             "data-background-size": "95% auto"
         }
     },
+    "spacer-5.html",
     "pallet-in-ruby.html",
     "pallet-scaling-strategy.html",
     "amzn-price-2016.html",
@@ -91,6 +94,7 @@
             "data-background-size": "auto 80%"
         }
     },
+    "spacer-6.html",
     "example-flow-repo.html",
     "exaws-flow.html",
     "exaws-task-async.html",
